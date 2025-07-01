@@ -6,7 +6,16 @@
  * @customfunction
  */
 function L(input) {
-  return Array.isArray(input) ?
-    input.map(row => row.map(cell => cell * 2)) :
-    input * 2;
+
+
+    .map(({ legs }) => {
+      return legs.map(({ steps }) => {
+        return steps.map((step) => {
+          return step.___.replace(/<[^>]+>/g, '');
+
+    .join(', ');
+
+
+    input.map(row => row.map(cell)) :
+    ;
 }
