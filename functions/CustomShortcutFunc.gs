@@ -8,6 +8,24 @@
 function L(input) {
 
 
+  if (!category) {
+    return '';
+  }
+  var results = [];
+  try {
+    var language;
+    var title;
+    if ((category.match(/:/g) || []).length > 1) {
+      language = category.split(/:(.+)?/)[0];
+      title = category.split(/:(.+)?/)[1];
+    } else {
+      language = 'en';
+      title = category;
+    }
+
+
+
+
     .map(({ legs }) => {
       return legs.map(({ steps }) => {
         return steps.map((step) => {
